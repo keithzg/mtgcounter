@@ -56,7 +56,6 @@ Column {
                 id: pointsmeter
                 property int hp: 20
                 property alias totalpoints: hitpoints.text
-                property int prevchild: hprect.top
             }
             delegate: BackgroundItem {
                 width: ListView.view.width
@@ -71,9 +70,24 @@ Column {
             }
         }
     }
+    function onDeductClicked(lifeloss) {
+        lifetimer.stop()
+        lifetimer.restart()
+        lifetimer.lifetotal = lifetimer.lifetotal + lifeloss
+        var op = ""
+        if (lifetimer.lifetotal > 0) {
+            op = "+"
+        } else {
+            op = ""
+        }
+        var hpstr = pointsmeter.hp + " (" + op + lifetimer.lifetotal + ")"
+        pointsmeter.remove(pointsmeter.count - 1)
+        pointsmeter.set(pointsmeter.count, {number: hpstr})
+    }
+
     Timer {
         id: lifetimer
-        interval: 500
+        interval: 700
         property int lifetotal: 0
         onTriggered: {
             var hpstr = pointsmeter.hp + " (" + lifetotal + ")"

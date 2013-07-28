@@ -16,6 +16,5 @@ Rectangle {
     }
     LifeClicker {
         id: dectcl
-        target: pointsmeter
     }
 }
