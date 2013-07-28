@@ -15,6 +15,7 @@ MouseArea {
             target.hp = target.hp + lifetotal
             target.append({number: target.totalpoints})
             lifetotal = 0
+            lifeview.positionViewAtEnd()
         }
     }
 
