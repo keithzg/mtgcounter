@@ -25,7 +25,7 @@ Page {
         contentHeight: childrenRect.height
         Row {
             width: parent.width
-            spacing: 2
+            spacing: 0
             CounterColumn {
                 id: player1
                 playername: "Me"

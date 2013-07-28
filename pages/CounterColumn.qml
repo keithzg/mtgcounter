@@ -22,6 +22,8 @@ Column {
         z: 5
         Label {
             id: playerlabel
+            anchors.horizontalCenter: parent.horizontalCenter
+            horizontalAlignment: Text.AlignHCenter
             text: "Me"
         }
     }
