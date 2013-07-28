@@ -5,19 +5,6 @@ MouseArea {
     height: parent.height
     property int lifeloss
     property variant target
-    Timer {
-        id: lifetimer
-        interval: 500
-        property int lifetotal: 0
-        onTriggered: {
-            var hpstr = target.hp + " (" + lifetotal + ")"
-            target.totalpoints = target.hp + lifetotal
-            target.hp = target.hp + lifetotal
-            target.append({number: target.totalpoints})
-            lifetotal = 0
-            lifeview.positionViewAtEnd()
-        }
-    }
 
     onClicked: {
         lifetimer.stop()

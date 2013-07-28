@@ -27,13 +27,15 @@ Column {
     }
     Rectangle {
         width: parent.width
-        height: 50
+        height: 70
         color: "black"
         border.width: 1
         border.color: "white"
         z: 5
         Label {
             property int hitpoints: 20
+            anchors.horizontalCenter: parent.horizontalCenter
+            font.pixelSize: theme.fontSizeExtraLarge
             id: hitpoints
             text: "20"
         }
@@ -65,6 +67,19 @@ Column {
                     text: number
                 }
             }
+        }
+    }
+    Timer {
+        id: lifetimer
+        interval: 500
+        property int lifetotal: 0
+        onTriggered: {
+            var hpstr = pointsmeter.hp + " (" + lifetotal + ")"
+            pointsmeter.totalpoints = pointsmeter.hp + lifetotal
+            pointsmeter.hp = pointsmeter.hp + lifetotal
+            pointsmeter.append({number: pointsmeter.totalpoints})
+            lifetotal = 0
+            lifeview.positionViewAtEnd()
         }
     }
     Rectangle {
