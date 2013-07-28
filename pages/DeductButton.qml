@@ -9,7 +9,8 @@ Rectangle {
     border.color: "white"
     border.width: 1
     anchors.topMargin: 15
-    anchors.leftMargin: 30
+    anchors.leftMargin: 15
+    anchors.rightMargin: 15
     DeductLabel {
         id: dectlabl
     }
