@@ -63,7 +63,9 @@ Column {
                 height: 35
                 Label {
                     id: points
+                    anchors.horizontalCenter: parent.horizontalCenter
                     horizontalAlignment: Text.AlignHCenter
+                    font.pixelSize: theme.fontSizeMedium
                     text: number
                 }
             }
