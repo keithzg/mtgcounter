@@ -9,6 +9,8 @@ Column {
         pointsmeter.clear()
         hitpoints.hitpoints = 20
         hitpoints.text = "20"
+        pointsmeter.hp = 20
+        pointsmeter.totalpoints = "20"
     }
 
     Rectangle {
