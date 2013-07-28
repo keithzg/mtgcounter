@@ -8,6 +8,8 @@ Rectangle {
     height: parent.commonheight
     border.color: "white"
     border.width: 1
+    anchors.topMargin: 15
+    anchors.leftMargin: 30
     DeductLabel {
         id: dectlabl
     }

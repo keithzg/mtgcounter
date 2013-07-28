@@ -69,6 +69,7 @@ Column {
         DeductButton {
             text: "-1"
             id: minusone
+            anchors.left: parent.left
             lifeloss: -1
         }
 
