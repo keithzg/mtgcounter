@@ -4,6 +4,7 @@ Rectangle {
     property alias text: dectlabl.text
     property alias lifeloss: dectcl.lifeloss
     color: "grey"
+    smooth: true
     width: parent.commonwidth
     height: parent.commonheight
     border.color: "white"

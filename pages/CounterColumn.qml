@@ -43,7 +43,7 @@ Column {
     Rectangle {
         id: hprect
         width: parent.width
-        height: 550
+        height: 530
         z: 3
         color: "black"
         border.width: 1
@@ -110,6 +110,7 @@ Column {
         DeductButton {
             text: "-1"
             id: minusone
+            anchors.top: parent.top
             anchors.left: parent.left
             lifeloss: -1
         }
@@ -123,6 +124,7 @@ Column {
 
         DeductButton {
             id: minusfive
+            anchors.top: parent.top
             anchors.right: parent.right
             text: "-5"
             lifeloss: -5
