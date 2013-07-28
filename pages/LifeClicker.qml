@@ -30,7 +30,6 @@ MouseArea {
         }
         var hpstr = target.hp + " (" + op + lifetimer.lifetotal + ")"
         target.remove(target.count - 1)
-        console.log(target.count)
         target.set(target.count, {number: hpstr})
     }
 }

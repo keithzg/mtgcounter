@@ -12,7 +12,12 @@ Page {
         PullDownMenu {
             MenuItem {
                 text: "New game"
-                onClicked: console.log("TODO")
+                onClicked:
+                {
+                    player1.clear()
+                    player2.clear()
+                }
+
             }
         }
         
@@ -22,9 +27,11 @@ Page {
             width: parent.width
             spacing: 2
             CounterColumn {
+                id: player1
                 playername: "Me"
             }
             CounterColumn {
+                id: player2
                 playername: "Opponent"
             }
         }

@@ -5,6 +5,12 @@ Column {
     width: parent.width / 2
     property alias playername: playerlabel.text
     property alias hitpoint: hitpoints.text
+    function clear() {
+        pointsmeter.clear()
+        hitpoints.hitpoints = 20
+        hitpoints.text = "20"
+    }
+
     Rectangle {
         width: parent.width
         height: 35
@@ -39,6 +45,7 @@ Column {
         border.width: 1
         border.color: "white"
         SilicaListView {
+            id: lifeview
             height: 550
             width: parent.width
             model: ListModel {
@@ -66,6 +73,7 @@ Column {
         color: "black"
         border.color: "white"
         border.width: 1
+        z: 5
         DeductButton {
             text: "-1"
             id: minusone
