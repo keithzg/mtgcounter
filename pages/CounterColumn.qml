@@ -33,13 +33,13 @@ Column {
     Rectangle {
         id: hprect
         width: parent.width
-        height: 450
+        height: 550
         z: 3
         color: "black"
         border.width: 1
         border.color: "white"
         SilicaListView {
-            height: 450
+            height: 550
             width: parent.width
             model: ListModel {
                 id: pointsmeter
@@ -59,69 +59,37 @@ Column {
         }
     }
     Rectangle {
-        property int commonwidth: 50
-        property int commonheight: 35
+        property int commonwidth: 85
+        property int commonheight: 85
         width: parent.width
         height: 250
         color: "black"
         border.color: "white"
         border.width: 1
-        Rectangle {
+        DeductButton {
+            text: "-1"
             id: minusone
-            color: "grey"
-            height: parent.commonheight
-            width: parent.commonwidth
-            anchors.left: parent.left
-            Label {
-                text: "-1"
-                horizontalAlignment: Text.AlignHCenter
-            }
-            LifeClicker {
-                lifeloss: -1
-                target: pointsmeter
-            }
+            lifeloss: -1
         }
-        Rectangle {
-            color: "grey"
-            width: parent.commonwidth
-            height: parent.commonheight
-            anchors.left: parent.left
+
+        DeductButton {
+            text: "+1"
             anchors.top: minusone.bottom
-            Label {
-                text: "+1"
-            }
-            LifeClicker {
-                lifeloss: 1
-                target: pointsmeter
-            }
+            anchors.left: parent.left
+            lifeloss: 1
         }
-        Rectangle {
-            color: "grey"
-            width: parent.commonwidth
-            height: parent.commonheight
-            anchors.right: parent.right
+
+        DeductButton {
             id: minusfive
-            Label {
-                text: "-5"
-            }
-            LifeClicker {
-                lifeloss: -5
-                target: pointsmeter
-            }
+            anchors.right: parent.right
+            text: "-5"
+            lifeloss: -5
         }
-        Rectangle {
-            color: "grey"
-            width: parent.commonwidth
-            height: parent.commonheight
+        DeductButton {
             anchors.top: minusfive.bottom
             anchors.right: parent.right
-            Label {
-                text: "+5"
-            }
-            LifeClicker {
-                lifeloss: 5
-                target: pointsmeter
-            }
+            text: "+5"
+            lifeloss: 5
         }
     }
 }
