@@ -3,7 +3,7 @@ import QtQuick 1.1
 Rectangle {
     property alias text: dectlabl.text
     property alias lifeloss: dectcl.lifeloss
-    color: "grey"
+    color: theme.highlightBackgroundColor
     smooth: true
     width: parent.commonwidth
     height: parent.commonheight
