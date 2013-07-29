@@ -17,8 +17,6 @@ Column {
         width: parent.width
         height: 35
         color: "transparent"
-        border.width: 1
-        border.color: "white"
         z: 5
         Label {
             id: playerlabel
@@ -28,10 +26,9 @@ Column {
     }
     Rectangle {
         width: parent.width
+        id: mainhprect
         height: 70
         color: "transparent"
-        border.width: 1
-        border.color: "white"
         z: 5
         Label {
             property int hitpoints: 20
@@ -44,15 +41,16 @@ Column {
     Rectangle {
         id: hprect
         width: parent.width
+        anchors.top: mainhprect.bottom
         height: 530
         z: 3
         color: "transparent"
-        border.width: 1
-        border.color: "white"
         SilicaListView {
+            anchors.top: mainhprect.bottom
             id: lifeview
-            height: 550
+            height: 530
             width: parent.width
+            z: 3
             model: ListModel {
                 id: pointsmeter
                 property int hp: 20
@@ -61,7 +59,9 @@ Column {
             delegate: BackgroundItem {
                 width: ListView.view.width
                 height: 35
+                z: 3
                 Label {
+                    z: 3
                     id: points
                     anchors.horizontalCenter: parent.horizontalCenter
                     horizontalAlignment: Text.AlignHCenter
@@ -105,8 +105,6 @@ Column {
         width: parent.width
         height: 250
         color: "transparent"
-        border.color: "white"
-        border.width: 1
         z: 5
         DeductButton {
             text: "-1"

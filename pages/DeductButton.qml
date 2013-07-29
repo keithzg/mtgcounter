@@ -1,14 +1,12 @@
 import QtQuick 1.1
+import Sailfish.Silica 1.0
 
-Rectangle {
+Button {
     property alias text: dectlabl.text
     property alias lifeloss: dectcl.lifeloss
-    color: theme.highlightBackgroundColor
     smooth: true
     width: parent.commonwidth
     height: parent.commonheight
-    border.color: "white"
-    border.width: 1
     anchors.topMargin: 15
     anchors.leftMargin: 15
     anchors.rightMargin: 15
