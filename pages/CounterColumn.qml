@@ -16,7 +16,7 @@ Column {
     Rectangle {
         width: parent.width
         height: 35
-        color: "black"
+        color: "transparent"
         border.width: 1
         border.color: "white"
         z: 5
@@ -24,13 +24,12 @@ Column {
             id: playerlabel
             anchors.horizontalCenter: parent.horizontalCenter
             horizontalAlignment: Text.AlignHCenter
-            text: "Me"
         }
     }
     Rectangle {
         width: parent.width
         height: 70
-        color: "black"
+        color: "transparent"
         border.width: 1
         border.color: "white"
         z: 5
@@ -47,7 +46,7 @@ Column {
         width: parent.width
         height: 530
         z: 3
-        color: "black"
+        color: "transparent"
         border.width: 1
         border.color: "white"
         SilicaListView {
@@ -105,7 +104,7 @@ Column {
         property int commonheight: 85
         width: parent.width
         height: 250
-        color: "black"
+        color: "transparent"
         border.color: "white"
         border.width: 1
         z: 5
