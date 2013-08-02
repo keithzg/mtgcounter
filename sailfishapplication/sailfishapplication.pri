@@ -1,4 +1,4 @@
-QT += declarative
+QT += qml quick
 
 SOURCES += $$PWD/sailfishapplication.cpp
 HEADERS += $$PWD/sailfishapplication.h

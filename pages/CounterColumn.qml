@@ -1,5 +1,6 @@
-import QtQuick 1.1
+import QtQuick 2.0
 import Sailfish.Silica 1.0
+import Sailfish.Silica.theme 1.0
 
 Column {
     width: parent.width / 2
@@ -33,7 +34,7 @@ Column {
         Label {
             property int hitpoints: 20
             anchors.horizontalCenter: parent.horizontalCenter
-            font.pixelSize: theme.fontSizeExtraLarge
+            font.pixelSize: Theme.fontSizeExtraLarge
             id: hitpoints
             text: "20"
         }
@@ -41,12 +42,10 @@ Column {
     Rectangle {
         id: hprect
         width: parent.width
-        anchors.top: mainhprect.bottom
         height: 530
         z: 3
         color: "transparent"
         SilicaListView {
-            anchors.top: mainhprect.bottom
             id: lifeview
             height: 530
             width: parent.width
@@ -65,7 +64,7 @@ Column {
                     id: points
                     anchors.horizontalCenter: parent.horizontalCenter
                     horizontalAlignment: Text.AlignHCenter
-                    font.pixelSize: theme.fontSizeMedium
+                    font.pixelSize: Theme.fontSizeMedium
                     text: number
                 }
             }
