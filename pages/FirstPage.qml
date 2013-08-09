@@ -30,6 +30,10 @@ Page {
                 id: player1
                 playername: "Me"
             }
+            Rectangle {
+                width: 1
+                height: parent.height
+            }
             CounterColumn {
                 id: player2
                 playername: "Opponent"
